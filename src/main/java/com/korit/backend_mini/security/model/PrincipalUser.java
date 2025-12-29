@@ -3,6 +3,7 @@ package com.korit.backend_mini.security.model;
 import com.korit.backend_mini.entity.UserRole;
 import lombok.Builder;
 import lombok.Data;
+import net.minidev.json.annotate.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,6 +17,7 @@ import java.util.stream.Collectors;
 public class PrincipalUser implements UserDetails {
     private Integer userId;
     private String email;
+    @JsonIgnore
     private String password;
     private String username;
     private String profileImg;
