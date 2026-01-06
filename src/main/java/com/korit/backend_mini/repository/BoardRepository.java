@@ -32,7 +32,7 @@ public class BoardRepository {
         return boardMapper.getBoardListByKeyword(keyword);
     }
 
-    List<BoardRespDto> getBoardInfinite(LocalDateTime cursorCreateDt, Integer cursorBoardId, Integer limitPlusOne) {
+    public List<BoardRespDto> getBoardInfinite(LocalDateTime cursorCreateDt, Integer cursorBoardId, Integer limitPlusOne) {
         return boardMapper.getBoardInfinite(cursorCreateDt, cursorBoardId, limitPlusOne);
     }
 
